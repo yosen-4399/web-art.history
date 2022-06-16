@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Сторінка продажу квитків</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Tabs Payment Form Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/creditly.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/easy-responsive-tabs.css">
+<script src="js/jquery.min.js"></script>
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<link href="//fonts.googleapis.com/css?family=Mirza:400,500,600,700&amp;subset=arabic,latin-ext" rel="stylesheet">
+</head>
+<body>
+	<div class="main">	
+		<h1>сторінка  оплати</h1>
+		<a href="F:\zjw\绘画\三年级下学期\实践\预制作\html\українськийtickets.html" style="font-size: 14px;"><h3><i class="fa fa-long-arrow-left"></i>Я подумаю</h3></a>
+		<div class="w3_agile_main_grids">
+			<div class="w3layouts_main_grid_left">
+				<div class="agile_amount">
+					<h3>Ціна</h3>
+					<h4>Одноденний квиток для пар</h4>
+					<h4>$166</h4>
+					<p>Ціни включають всі податки</p>
+				</div>
+			</div>
+			<div class="agileits_main_grid_right">
+				<div class="wthree_payment_grid">
+					<h2>Способи оплати</h2>
+					<div id="horizontalTab">
+						<ul class="resp-tabs-list">
+							<li><img src="images/1.jpg" alt=" " /></li>
+							<li><img src="images/2.jpg" alt=" " /></li>
+						</ul>
+						<div class="resp-tabs-container">
+							<div class="agileits_w3layouts_tab1">
+								<form action="#" method="post" class="creditly-card-form agileinfo_form">
+									<section class="creditly-wrapper wthree, w3_agileits_wrapper">
+										<div class="credit-card-wrapper">
+											<div class="first-row form-group">
+												<div class="controls">
+													<label class="control-label">Ім'я на картці</label>
+													<input class="billing-address-name form-control" type="text" name="name" placeholder="John Smith">
+												</div>
+												<div class="w3_agileits_card_number_grids">
+													<div class="w3_agileits_card_number_grid_left">
+														<div class="controls">
+															<label class="control-label">Номер картки</label>
+															<input class="number credit-card-number form-control" type="text" name="number"
+																		  inputmode="numeric" autocomplete="cc-number" autocompletetype="cc-number" x-autocompletetype="cc-number"
+																		  placeholder="&#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149;">
+														</div>
+													</div>
+													<div class="w3_agileits_card_number_grid_right">
+														<div class="controls">
+															<label class="control-label">CVV</label>
+															<input class="security-code form-control"Â·
+																		  inputmode="numeric"
+																		  type="text" name="security-code"
+																		  placeholder="&#149;&#149;&#149;">
+														</div>
+													</div>
+													<div class="clear"> </div>
+												</div>
+												<div class="controls">
+													<label class="control-label">Термін придатності</label>
+													<input class="expiration-month-and-year form-control" type="text" name="expiration-month-and-year" placeholder="MM / YY">
+												</div>
+											</div>
+											<button class="submit"><span>впевнений<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></button>
+										</div>
+									</section>
+								</form>
+							</div>
+							<div class="agileits_w3layouts_tab2">
+								<h3>Ще немає облікового запису PayPal<a href="#">Натисніть тут</a></h3>
+								<form action="#" method="post">
+									<input type="email" name="Email" placeholder="Рахунок" required="">
+									<input type="password" name="Password" placeholder="пароль" required="">
+									<input type="submit" value="Логін">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clear"> </div>
+		</div>
+	</div>
+		<script type="text/javascript" src="js/creditly.js"></script>
+		<script type="text/javascript">
+			$(function() {
+			  var creditly = Creditly.initialize(
+				  '.creditly-wrapper .expiration-month-and-year',
+				  '.creditly-wrapper .credit-card-number',
+				  '.creditly-wrapper .security-code',
+				  '.creditly-wrapper .card-type');
+
+			  $(".creditly-card-form .submit").click(function(e) {
+				e.preventDefault();
+				var output = creditly.validate();
+				if (output) {
+				  console.log(output);
+				}
+			  });
+			});
+		</script>
+	<script src="js/easy-responsive-tabs.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#horizontalTab').easyResponsiveTabs({
+				type: 'default',
+				width: 'auto',
+				fit: true, 
+				closed: 'accordion', 
+				activate: function(event) {
+				var $tab = $(this);
+				var $info = $('#tabInfo');
+				var $name = $('span', $info);
+				$name.text($tab.text());
+				$info.show();
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>
